@@ -193,13 +193,21 @@ function mostrarObjetivo(objetivo) {
         return;
     }
 
+    let claseSeleccionada = "";
+
+    if (typeof objetivoActualId !== "undefined" && objetivoActualId != null
+            && Number(objetivoActualId) === Number(objetivo.id)) {
+        claseSeleccionada = " selected";
+    }
+
     contenedor.innerHTML =
-        "<div class='item'>" +
+        "<div class='item clickable objetivo-card" + claseSeleccionada + "' onclick='seleccionarObjetivoActual()'>" +
         "<div class='record-row'>" +
         "<div class='record-icon'>🎯</div>" +
         "<div class='record-main'>" +
         "<strong>Objetivo actual</strong>" +
         "<small>" + escaparHtml(objetivo.descripcion || "Sin descripción") + "</small>" +
+        "<small class='selection-hint'>Clic para seleccionar y editar</small>" +
         "</div>" +
         "<div class='record-score'>" + formatearHoras(objetivo.horasObjetivo) + "<small>ID " + objetivo.id + "</small></div>" +
         "</div>" +

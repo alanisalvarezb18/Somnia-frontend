@@ -1212,3 +1212,37 @@ button.full,
     margin: 6px 0 0;
     line-height: 1.5;
 }
+
+/* Selección de objetivos */
+.selection-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px;
+    padding: 9px 13px;
+    border-radius: 999px;
+    background: #eef0ff;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.selection-pill.active {
+    background: linear-gradient(135deg, rgba(93, 87, 233, 0.14), rgba(116, 216, 255, 0.16));
+    color: var(--indigo-dark);
+    border: 1px solid rgba(93, 87, 233, 0.25);
+}
+
+.objetivo-card {
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.objetivo-card.selected {
+    border-color: rgba(93, 87, 233, 0.65);
+    box-shadow: 0 16px 34px rgba(93, 87, 233, 0.16);
+}
+
+.selection-hint {
+    color: var(--indigo-dark) !important;
+    font-weight: 800;
+}
