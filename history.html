@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia - Historial</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-page">
+
+<div class="app-layout">
+    <aside id="navbar" class="sidebar"></aside>
+
+    <main class="content-shell">
+        <section class="hero-panel compact">
+            <div>
+                <span class="eyebrow">Historial</span>
+                <h1>Historial y seguimiento</h1>
+                <p>Consultá tus registros y revisá si estás cumpliendo tu objetivo de sueño.</p>
+            </div>
+            <div class="hero-moon">📊</div>
+        </section>
+
+        <section class="card toolbar-card">
+            <div class="card-title-row no-margin">
+                <div>
+                    <h2>Datos actualizados</h2>
+                    <p>Esta vista carga el historial y el seguimiento automáticamente al entrar.</p>
+                </div>
+                <button onclick="cargarHistorialCompleto(true)">Actualizar</button>
+            </div>
+        </section>
+
+        <section class="two-column">
+            <article class="card result-card">
+                <h2>Historial</h2>
+                <div id="resultadoHistorial" class="resultado scroll-area">
+                    <div class="empty-state">Cargando historial...</div>
+                </div>
+            </article>
+
+            <article class="card result-card">
+                <h2>Seguimiento</h2>
+                <div id="resultadoSeguimiento" class="resultado">
+                    <div class="empty-state">Cargando seguimiento...</div>
+                </div>
+            </article>
+        </section>
+    </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

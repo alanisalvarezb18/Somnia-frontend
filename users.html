@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia - Usuarios</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-page">
+
+<div class="app-layout">
+    <aside id="navbar" class="sidebar"></aside>
+
+    <main class="content-shell">
+        <section class="hero-panel compact">
+            <div>
+                <span class="eyebrow">Administración</span>
+                <h1>Usuarios</h1>
+                <p>Sección disponible únicamente para usuarios con rol ADMIN.</p>
+            </div>
+            <div class="hero-moon">👥</div>
+        </section>
+
+        <section class="two-column users-layout">
+            <article class="card form-card">
+                <h2>Búsqueda</h2>
+
+                <div class="actions top-action">
+                    <button onclick="listarUsuarios()">Listar todos</button>
+                </div>
+
+                <div class="form-group">
+                    <label>ID de usuario</label>
+                    <input type="number" id="buscarUsuarioId" placeholder="ID">
+                    <button class="secondary full" onclick="buscarUsuarioPorId()">Buscar por ID</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" id="buscarUsuarioCorreo" placeholder="correo@ejemplo.com">
+                    <button class="secondary full" onclick="buscarUsuarioPorCorreo()">Buscar por correo</button>
+                </div>
+            </article>
+
+            <article class="card form-card">
+                <h2>Editar usuario seleccionado</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="number" id="usuarioIdEditar" placeholder="ID" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <select id="usuarioRolEditar">
+                            <option value="ESTUDIANTE">ESTUDIANTE</option>
+                            <option value="ADMIN">ADMIN</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" id="usuarioNombreEditar" placeholder="Nombre">
+                </div>
+
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" id="usuarioCorreoEditar" placeholder="Correo">
+                </div>
+
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="usuarioContrasenaEditar" placeholder="Nueva contraseña">
+                </div>
+
+                <div class="actions">
+                    <button onclick="editarUsuario()">Editar usuario</button>
+                    <button class="danger" onclick="eliminarUsuario()">Eliminar usuario</button>
+                </div>
+            </article>
+        </section>
+
+        <section class="card result-card">
+            <div class="card-title-row">
+                <div>
+                    <h2>Resultados</h2>
+                    <p>Hacé clic sobre un usuario para seleccionarlo.</p>
+                </div>
+            </div>
+            <div id="resultadoUsuarios" class="resultado user-grid-results">
+                <div class="empty-state">No hay usuarios consultados.</div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/users.js"></script>
+</body>
+</html>

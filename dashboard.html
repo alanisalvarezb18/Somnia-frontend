@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia - Inicio</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-page">
+
+<div class="app-layout">
+    <aside id="navbar" class="sidebar"></aside>
+
+    <main class="content-shell">
+        <section class="hero-panel">
+            <div>
+                <span class="eyebrow">Panel principal</span>
+                <h1>¡Buenas noches!</h1>
+                <p>Aquí tienes un resumen de tu sueño y tus avances recientes.</p>
+            </div>
+            <div class="hero-moon">🌙</div>
+        </section>
+
+        <section class="summary-grid">
+            <article class="metric-card">
+                <span class="metric-icon">💤</span>
+                <p>Horas dormidas</p>
+                <h2 id="dashboardHoras">--</h2>
+                <small>Último registro</small>
+            </article>
+
+            <article class="metric-card">
+                <span class="metric-icon cyan">⭐</span>
+                <p>Calidad del sueño</p>
+                <h2 id="dashboardCalidad">--</h2>
+                <small>Promedio general</small>
+            </article>
+
+            <article class="metric-card">
+                <span class="metric-icon purple">🎯</span>
+                <p>Objetivo de sueño</p>
+                <h2 id="dashboardObjetivo">--</h2>
+                <small>Meta configurada</small>
+            </article>
+
+            <article class="metric-card">
+                <span class="metric-icon orange">🔥</span>
+                <p>Registros cumplidos</p>
+                <h2 id="dashboardCumplidos">--</h2>
+                <small>Según tu objetivo</small>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="card wide-card">
+                <div class="card-title-row">
+                    <div>
+                        <h2>Horas de sueño por día</h2>
+                        <p>Últimos registros guardados.</p>
+                    </div>
+                    <span class="pill">Somnia</span>
+                </div>
+                <div id="dashboardChart" class="sleep-chart empty-state">Cargá tus registros para ver la gráfica.</div>
+                <div class="sleep-note">💡 Dormir de 7 a 9 horas ayuda a mejorar memoria, concentración y energía.</div>
+            </article>
+
+            <article class="card">
+                <div class="card-title-row">
+                    <div>
+                        <h2>Registros recientes</h2>
+                        <p>Tus noches más recientes.</p>
+                    </div>
+                    <a href="records.html" class="link-text">Ver todo</a>
+                </div>
+                <div id="dashboardRecientes" class="resultado">
+                    <div class="empty-state">No hay registros consultados.</div>
+                </div>
+            </article>
+        </section>
+
+        <section class="dashboard-grid bottom-grid">
+            <article class="card tips-card">
+                <div class="card-title-row">
+                    <h2>Ideas para dormir mejor</h2>
+                    <span>✨</span>
+                </div>
+                <div class="tips-list">
+                    <div><span>📱</span><strong>Evita pantallas</strong><p>1 hora antes de dormir.</p></div>
+                    <div><span>☕</span><strong>Reduce cafeína</strong><p>Después de las 5 p. m.</p></div>
+                    <div><span>📖</span><strong>Rutina relajante</strong><p>Lee o medita antes de dormir.</p></div>
+                </div>
+            </article>  
+        </section>
+    </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

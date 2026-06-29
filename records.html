@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia - Registros</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-page">
+
+<div class="app-layout">
+    <aside id="navbar" class="sidebar"></aside>
+
+    <main class="content-shell">
+        <section class="hero-panel compact">
+            <div>
+                <span class="eyebrow">Registros</span>
+                <h1>Registros de sueño</h1>
+                <p>Guardá cada noche con fecha, horarios, calidad y observaciones.</p>
+            </div>
+            <div class="hero-moon">🛌</div>
+        </section>
+
+        <section class="two-column records-layout">
+            <article class="card form-card">
+                <h2>Nuevo registro</h2>
+
+                <div class="form-group">
+                    <label>Fecha</label>
+                    <input type="date" id="fechaRegistro">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Hora de dormir</label>
+                        <input type="time" id="horaDormir">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Hora de despertar</label>
+                        <input type="time" id="horaDespertar">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Calidad de sueño</label>
+                    <input type="number" id="calidadSueno" min="1" max="5" step="1" placeholder="1 a 5">
+                </div>
+
+                <div class="form-group">
+                    <label>Observaciones</label>
+                    <textarea id="observaciones" placeholder="Ejemplo: dormí bien, me desperté una vez..."></textarea>
+                </div>
+
+                <div class="actions">
+                    <button onclick="crearRegistroSueno()">Guardar</button>
+                    <button class="secondary" onclick="listarRegistros(true)">Actualizar lista</button>
+                    <button class="secondary" onclick="editarRegistro()">Editar seleccionado</button>
+                    <button class="danger" onclick="eliminarRegistro()">Eliminar seleccionado</button>
+                </div>
+            </article>
+
+            <article class="card result-card">
+                <div class="card-title-row">
+                    <div>
+                        <h2>Mis registros</h2>
+                        <p>Hacé clic sobre un registro para seleccionarlo.</p>
+                    </div>
+                </div>
+                <div id="resultadoRegistros" class="resultado scroll-area">
+                    <div class="empty-state">Cargando registros...</div>
+                </div>
+            </article>
+        </section>
+    </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/records.js"></script>
+</body>
+</html>

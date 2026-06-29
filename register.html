@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia - Registro</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+
+<div class="auth-background"></div>
+
+<main class="auth-wrapper">
+    <section class="auth-hero glass-panel">
+        <img src="assets/logo-somnia.png" alt="Logo de Somnia" class="auth-logo-image">
+
+        <div class="hero-copy">
+            <span class="eyebrow">Crea tu espacio</span>
+            <h1>Empieza a cuidar tu descanso desde hoy.</h1>
+            <p>
+                Creá tu cuenta, guardá tus registros de sueño y consultá tu seguimiento personal.
+            </p>
+        </div>
+
+        <div class="sleep-tip-card">
+            <span class="moon-badge">🛌</span>
+            <div>
+                <strong>Consejo Somnia</strong>
+                <p>Una meta clara hace más fácil mejorar tus hábitos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-card">
+        <div class="auth-card-header">
+            <span class="mini-icon">🌟</span>
+            <div>
+                <h2>Crear cuenta</h2>
+                <p>Completá los datos para registrar un usuario.</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" id="registroNombre" placeholder="Nombre">
+        </div>
+
+        <div class="form-group">
+            <label>Correo</label>
+            <input type="email" id="registroCorreo" placeholder="correo@ejemplo.com">
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="registroContrasena" placeholder="Mínimo 8 caracteres">
+        </div>
+
+        <div class="form-group">
+            <label>Rol</label>
+            <select id="registroRol">
+                <option value="ESTUDIANTE">ESTUDIANTE</option>
+                <option value="ADMIN">ADMIN</option>
+            </select>
+        </div>
+
+        <button class="full" onclick="registrarUsuario()">Crear cuenta</button>
+
+        <p class="small auth-link">
+            ¿Ya tenés cuenta? <a class="link-text" href="index.html">Iniciar sesión</a>
+        </p>
+    </section>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>

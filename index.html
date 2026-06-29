@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia - Login</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+
+<div class="auth-background"></div>
+
+<main class="auth-wrapper">
+    <section class="auth-hero glass-panel">
+        <img src="assets/logo-somnia.png" alt="Logo de Somnia" class="auth-logo-image">
+
+        <div class="hero-copy">
+            <span class="eyebrow">Seguimiento de sueño</span>
+            <h1>Duerme mejor. Rinde mejor. Vive mejor.</h1>
+            <p>
+                Registrá tus horas de sueño, definí una meta diaria y revisá tu progreso desde una experiencia tranquila y fácil de usar.
+            </p>
+        </div>
+
+        <div class="sleep-tip-card">
+            <span class="moon-badge">🌙</span>
+            <div>
+                <strong>Rutina recomendada</strong>
+                <p>Registrá tus noches y revisá tu progreso semanal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-card">
+        <div class="auth-card-header">
+            <span class="mini-icon">✨</span>
+            <div>
+                <h2>Iniciar sesión</h2>
+                <p>Ingresá con tu correo y contraseña registrados.</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Correo</label>
+            <input type="email" id="loginCorreo" placeholder="correo@ejemplo.com">
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="loginContrasena" placeholder="Contraseña">
+        </div>
+
+        <button class="full" onclick="login()">Entrar a Somnia</button>
+
+        <p class="small auth-link">
+            ¿No tenés cuenta? <a class="link-text" href="register.html">Crear cuenta</a>
+        </p>
+    </section>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
