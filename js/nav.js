@@ -12,8 +12,8 @@ function escribirNavbar() {
             "<div><strong>Somnia</strong><span>Dulces sueños</span></div>" +
             "</div>" +
             "<div class='nav-links'>" +
-            crearLinkNav("index.html", "🌙 Login", window.location.pathname.split("/").pop()) +
-            crearLinkNav("register.html", "✨ Registro", window.location.pathname.split("/").pop()) +
+            crearLinkNav("index.html", "Login", window.location.pathname.split("/").pop()) +
+            crearLinkNav("register.html", "Registro", window.location.pathname.split("/").pop()) +
             "</div>";
         return;
     }
@@ -26,14 +26,14 @@ function escribirNavbar() {
         "<div><strong>Somnia</strong><span>Dulces sueños</span></div>" +
         "</div>" +
         "<div class='nav-links'>" +
-        crearLinkNav("dashboard.html", "🏠 Inicio", paginaActual) +
-        crearLinkNav("records.html", "🌙 Registros de sueño", paginaActual) +
-        crearLinkNav("goals.html", "🎯 Objetivos", paginaActual) +
-        crearLinkNav("history.html", "🕒 Historial", paginaActual) +
-        crearLinkNav("profile.html", "👤 Mi perfil", paginaActual);
+        crearLinkNav("dashboard.html", "Inicio", paginaActual) +
+        crearLinkNav("records.html", "Registros de sueño", paginaActual) +
+        crearLinkNav("goals.html", "Objetivos", paginaActual) +
+        crearLinkNav("history.html", "Historial", paginaActual) +
+        crearLinkNav("profile.html", "Mi perfil", paginaActual);
 
     if (usuarioActual.rol === "ADMIN") {
-        contenido += crearLinkNav("users.html", "👥 Usuarios", paginaActual);
+        contenido += crearLinkNav("users.html", "Usuarios", paginaActual);
     }
 
     contenido +=
@@ -42,7 +42,7 @@ function escribirNavbar() {
         "<div class='avatar'>" + obtenerInicialUsuario() + "</div>" +
         "<div><strong>" + usuarioActual.nombre + "</strong><p>" + usuarioActual.rol + "</p></div>" +
         "</div>" +
-        "<button class='logout-button' onclick='cerrarSesion()'>🚪 Cerrar sesión</button>";
+        "<button class='logout-button' onclick='cerrarSesion()'>Cerrar sesión</button>";
 
     nav.innerHTML = contenido;
 }

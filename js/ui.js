@@ -243,13 +243,13 @@ function mostrarRegistros(registros) {
 
 function crearHtmlRegistro(registro) {
     return "<div class='record-row'>" +
-        "<div class='record-icon'>🌙</div>" +
+        "<div class='record-icon'>🛌</div>" +
         "<div class='record-main'>" +
         "<strong>" + escaparHtml(registro.fechaRegistro) + "</strong>" +
         "<small>" + formatearHora(registro.horaDormir) + " - " + formatearHora(registro.horaDespertar) + "</small>" +
         "<small>" + escaparHtml(registro.observaciones || "Sin observaciones") + "</small>" +
         "</div>" +
-        "<div class='record-score'>" + formatearHoras(registro.horasDormidas) + "<small>⭐ " + formatearCalidad(registro.calidadSueno) + "</small></div>" +
+        "<div class='record-score'>" + formatearHoras(registro.horasDormidas) + "<small>Calidad " + formatearCalidad(registro.calidadSueno) + "</small></div>" +
         "</div>";
 }
 
@@ -323,7 +323,7 @@ function mostrarSeguimiento(data) {
         "<div class='summary-grid compact-summary'>" +
         crearMiniStat("Registros", total, "🛌") +
         crearMiniStat("Promedio", formatearHoras(promedioHoras), "💤") +
-        crearMiniStat("Calidad", formatearCalidad(promedioCalidad), "⭐") +
+        crearMiniStat("Calidad", formatearCalidad(promedioCalidad), "✓") +
         crearMiniStat("Cumplidos", cumplidos, "🎯") +
         "</div>" +
         "<div class='tracking-detail'>" +
