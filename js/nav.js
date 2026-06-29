@@ -29,7 +29,8 @@ function escribirNavbar() {
         crearLinkNav("dashboard.html", "🏠 Inicio", paginaActual) +
         crearLinkNav("records.html", "🌙 Registros de sueño", paginaActual) +
         crearLinkNav("goals.html", "🎯 Objetivos", paginaActual) +
-        crearLinkNav("history.html", "🕒 Historial", paginaActual);
+        crearLinkNav("history.html", "🕒 Historial", paginaActual) +
+        crearLinkNav("profile.html", "👤 Mi perfil", paginaActual);
 
     if (usuarioActual.rol === "ADMIN") {
         contenido += crearLinkNav("users.html", "👥 Usuarios", paginaActual);

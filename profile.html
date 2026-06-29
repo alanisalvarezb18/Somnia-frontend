@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somnia - Mi perfil</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-page">
+
+<div class="app-layout">
+    <aside id="navbar" class="sidebar"></aside>
+
+    <main class="content-shell">
+        <section class="hero-panel compact">
+            <div>
+                <span class="eyebrow">Perfil</span>
+                <h1>Mi perfil</h1>
+                <p>Actualizá tu información personal sin entrar al módulo administrativo de usuarios.</p>
+            </div>
+            <div class="hero-moon">👤</div>
+        </section>
+
+        <section class="two-column profile-layout">
+            <article class="card profile-card">
+                <div class="profile-avatar" id="perfilInicial">U</div>
+                <h2 id="perfilNombreActual">Usuario</h2>
+                <p id="perfilCorreoActual">correo@ejemplo.com</p>
+                <span class="badge" id="perfilRolActual">ESTUDIANTE</span>
+
+                <div class="profile-note">
+                    <strong>Cuenta activa</strong>
+                    <p>Estos datos corresponden al usuario que tiene la sesión iniciada en Somnia.</p>
+                </div>
+            </article>
+
+            <article class="card form-card">
+                <h2>Editar información personal</h2>
+                <p class="form-helper">Modificá solo los campos necesarios. La contraseña se cambia únicamente si escribís una nueva.</p>
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" id="perfilNombre" placeholder="Nombre">
+                </div>
+
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="email" id="perfilCorreo" placeholder="correo@ejemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Nueva contraseña</label>
+                    <input type="password" id="perfilContrasena" placeholder="Dejar vacío para no cambiar">
+                </div>
+
+                <div class="actions">
+                    <button onclick="guardarPerfil()">Guardar cambios</button>
+                    <button class="secondary" onclick="cargarPerfil(false)">Restaurar datos</button>
+                </div>
+            </article>
+        </section>
+    </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

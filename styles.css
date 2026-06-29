@@ -1153,3 +1153,62 @@ button.full,
 .sidebar-user {
     margin-top: 28px;
 }
+
+
+.form-helper {
+    margin: -6px 0 18px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.profile-layout {
+    align-items: stretch;
+}
+
+.profile-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 390px;
+}
+
+.profile-avatar {
+    width: 118px;
+    height: 118px;
+    border-radius: 36px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    color: white;
+    font-size: 48px;
+    font-weight: 900;
+    background: linear-gradient(145deg, var(--indigo), var(--cyan));
+    box-shadow: 0 20px 45px rgba(93, 87, 233, 0.28);
+}
+
+.profile-card h2 {
+    margin: 0 0 6px;
+    font-size: 30px;
+}
+
+.profile-card p {
+    margin: 0 0 14px;
+    color: var(--muted);
+}
+
+.profile-note {
+    margin-top: 26px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    background: var(--lavender-soft);
+    color: var(--text);
+    text-align: left;
+}
+
+.profile-note p {
+    margin: 6px 0 0;
+    line-height: 1.5;
+}
